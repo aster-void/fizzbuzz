@@ -9,13 +9,8 @@ import (
 
 func TestFizzOnly(t *testing.T) {
 	assert := assert.New(t)
-	v := fizz.Fizz(3)
 
-	assert.Equal("Fizz", v)
-
-	v = fizz.Fizz(6)
-	assert.Equal("Fizz", 6)
-
-	v = fizz.Fizz(10)
-	assert.Equal("", v)
+	assert.Equal("Fizz", fizz.Fizz(3))
+	assert.Equal("Fizz", fizz.Fizz(6))
+	assert.Equal("", fizz.Fizz(10))
 }
