@@ -4,7 +4,7 @@ int is_buzz(int n) {
   return n % 5 == 0;
 }
 
-char *buzz(char* buf, int n) {
+void buzz(char* buf, int n) {
   if (is_buzz(n)) {
     memcpy(buf, "Buzz", strlen("Buzz") + 1);
   } else {

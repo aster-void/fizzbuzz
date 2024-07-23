@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "./fizzbuzz.h"
 
 int main() {
-  for (int i = 1; i <= 15; i++) {
-    char *v = apply(i);
-    printf("%s\n", v);
-    free(v);
+  char **list = range(1, 15);
+  for (int i = 0; i < 15; i++) {
+    printf("%s\n", list[i]);
   }
+  free(list);
 }
