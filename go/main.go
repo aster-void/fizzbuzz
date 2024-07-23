@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	fizzbuzz "github.com/aster-void/fizzbuzz/go/app"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	list := fizzbuzz.Range(1, 15)
+	for _, item := range list {
+		fmt.Println(item)
+	}
 }
