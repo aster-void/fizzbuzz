@@ -1,4 +1,4 @@
-name: test
+name: Gleam test
 
 on:
   push:
@@ -18,6 +18,13 @@ jobs:
           gleam-version: "1.2.1"
           rebar3-version: "3"
           # elixir-version: "1.15.4"
+
       - run: gleam deps download
+        working-directory: gleam/fizzbuzz
+
       - run: gleam test
+        working-directory: gleam/fizzbuzz
+
       - run: gleam format --check src test
+        working-directory: gleam/fizzbuzz
+
