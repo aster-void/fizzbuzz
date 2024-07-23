@@ -9,19 +9,17 @@ import (
 
 func Range(start int, last int) []string {
 	length := last - start + 1
+
 	src := make([]int, length)
 	for i := 0; i < length; i++ {
 		src[i] = i + start
 	}
-	return Map(src)
-}
 
-func Map(src []int) []string {
-	length := len(src)
 	dest := make([]string, length)
 	for i := 0; i < length; i++ {
 		dest[i] = Apply(src[i])
 	}
+
 	return dest
 }
 
